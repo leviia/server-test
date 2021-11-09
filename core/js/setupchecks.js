@@ -189,12 +189,6 @@
 							type: OC.SetupChecks.MESSAGE_TYPE_WARNING
 						});
 					}
-					if (data.isReadOnlyConfig) {
-						messages.push({
-							msg: t('core', 'The read-only config has been enabled. This prevents setting some configurations via the web-interface. Furthermore, the file needs to be made writable manually for every update.'),
-							type: OC.SetupChecks.MESSAGE_TYPE_INFO
-						});
-					}
 					if (!data.hasValidTransactionIsolationLevel) {
 						messages.push({
 							msg: t('core', 'Your database does not run with "READ COMMITTED" transaction isolation level. This can cause problems when multiple actions are executed in parallel.'),
@@ -205,14 +199,6 @@
 						messages.push({
 							msg: t('core', 'The PHP module "fileinfo" is missing. It is strongly recommended to enable this module to get the best results with MIME type detection.'),
 							type: OC.SetupChecks.MESSAGE_TYPE_INFO
-						});
-					}
-					if(!data.hasWorkingFileLocking) {
-						messages.push({
-							msg: t('core', 'Transactional file locking is disabled, this might lead to issues with race conditions. Enable "filelocking.enabled" in config.php to avoid these problems. See the {linkstart}documentation ↗{linkend} for more information.')
-								.replace('{linkstart}', '<a target="_blank" rel="noreferrer noopener" class="external" href="' + OC.theme.docPlaceholderUrl.replace('PLACEHOLDER', 'admin-transactional-locking') + '">')
-								.replace('{linkend}', '</a>'),
-							type: OC.SetupChecks.MESSAGE_TYPE_WARNING
 						});
 					}
 					if (data.suggestedOverwriteCliURL !== '') {
@@ -310,16 +296,6 @@
 								.replace('{linkstart}', '<a target="_blank" rel="noreferrer noopener" class="external" href="https://code.google.com/p/memcached/wiki/PHPClientComparison">')
 								.replace('{linkend}', '</a>'),
 							type: OC.SetupChecks.MESSAGE_TYPE_WARNING
-						});
-					}
-					if(!data.hasPassedCodeIntegrityCheck) {
-						messages.push({
-							msg: t('core', 'Some files have not passed the integrity check. Further information on how to resolve this issue can be found in the {linkstart1}documentation ↗{linkend}. ({linkstart2}List of invalid files…{linkend} / {linkstart3}Rescan…{linkend})')
-								.replace('{linkstart1}', '<a target="_blank" rel="noreferrer noopener" class="external" href="' + data.codeIntegrityCheckerDocumentation + '">')
-								.replace('{linkstart2}', '<a href="' + OC.generateUrl('/settings/integrity/failed') + '">')
-								.replace('{linkstart3}', '<a href="' + OC.generateUrl('/settings/integrity/rescan?requesttoken={requesttoken}', {'requesttoken': OC.requestToken}) + '">')
-								.replace(/{linkend}/g, '</a>'),
-							type: OC.SetupChecks.MESSAGE_TYPE_ERROR
 						});
 					}
 					if(!data.hasOpcacheLoaded) {

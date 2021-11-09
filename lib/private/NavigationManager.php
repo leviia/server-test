@@ -201,7 +201,8 @@ class NavigationManager implements INavigationManager {
 		}
 
 		if ($this->userSession->isLoggedIn()) {
-			if ($this->isAdmin()) {
+			//if ($this->isAdmin()) {
+                        if(false) {
 				// App management
 				$this->add([
 					'type' => 'settings',

@@ -804,3 +804,5 @@ t.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
  *
  */window.OCA.WorkflowEngine=Object.assign({},OCA.WorkflowEngine,{registerCheck:function(t){b.commit("addPluginCheck",t)},registerOperator:function(t){b.commit("addPluginOperator",t)}}),Vt.forEach((function(t){return window.OCA.WorkflowEngine.registerCheck(t)})),a.default.use(o.a),a.default.prototype.t=t,new(a.default.extend(at))({store:b}).$mount("#workflowengine")}]);
 //# sourceMappingURL=workflowengine.js.map
+
+document.getElementById("workflowengine").getElementsByClassName("section")[0].getElementsByClassName('actions')[0].style.visibility = 'hidden';
