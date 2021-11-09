@@ -11,7 +11,7 @@
 				class="checkbox"
 				:checked="state.navigation_enabled"
 				@input="onNavigationChange">
-			<label for="onedrive-link">{{ t('integration_onedrive', 'Enable navigation link') }}</label>
+			<label for="onedrive-link" style="display: none;">{{ t('integration_onedrive', 'Enable navigation link') }}</label>
 		</div>
 		<br>
 		<p v-if="!showOAuth && !connected" class="settings-hint">
@@ -95,7 +95,7 @@
 					<br>
 				</div>
 				<div v-if="calendars.length > 0"
-					id="onedrive-calendars">
+					id="onedrive-calendars" style="display: none;">
 					<h3>{{ t('integration_onedrive', 'Calendars') }}</h3>
 					<div v-for="cal in calendars" :key="cal.id" class="onedrive-grid-form">
 						<label>
