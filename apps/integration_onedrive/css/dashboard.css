@@ -1,0 +1,7 @@
+.icon-onedrive {
+	background-image: url(./../img/app-dark.svg);
+}
+
+body.theme--dark .icon-onedrive {
+	background-image: url(./../img/app.svg);
+}

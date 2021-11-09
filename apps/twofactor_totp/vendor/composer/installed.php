@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => 'eda41e79429e57444a4923d3be4874a8d9de4c88',
+        'name' => '__root__',
+        'dev' => false,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => 'eda41e79429e57444a4923d3be4874a8d9de4c88',
+            'dev_requirement' => false,
+        ),
+        'christian-riesen/base32' => array(
+            'pretty_version' => '1.5.2',
+            'version' => '1.5.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../christian-riesen/base32',
+            'aliases' => array(),
+            'reference' => 'a1cac38d50adb5ce9337a62019a0697cc5da3ca1',
+            'dev_requirement' => false,
+        ),
+        'rullzer/easytotp' => array(
+            'pretty_version' => 'v0.1.4',
+            'version' => '0.1.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../rullzer/easytotp',
+            'aliases' => array(),
+            'reference' => '3214c29212bab1c9b5ffd03b228e51bf85cae305',
+            'dev_requirement' => false,
+        ),
+    ),
+);

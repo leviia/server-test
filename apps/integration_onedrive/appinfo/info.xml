@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<info>
+    <id>integration_onedrive</id>
+    <name>OneDrive integration</name>
+    <summary>Integration of Microsoft OneDrive</summary>
+    <description><![CDATA[Microsoft OneDrive integration allows you to automatically import your OneDrive files into Nextcloud.]]></description>
+    <version>1.1.0</version>
+    <licence>agpl</licence>
+    <author>Julien Veyssier</author>
+    <namespace>Onedrive</namespace>
+    <documentation>
+        <developer>https://github.com/eneiluj/integration_onedrive</developer>
+    </documentation>
+    <category>integration</category>
+    <category>dashboard</category>
+    <website>https://github.com/eneiluj/integration_onedrive</website>
+    <bugs>https://github.com/eneiluj/integration_onedrive/issues</bugs>
+    <screenshot>https://github.com/eneiluj/integration_onedrive/raw/master/img/screenshot1.jpg</screenshot>
+    <dependencies>
+        <database min-version="9.4">pgsql</database>
+        <database>sqlite</database>
+        <database min-version="5.5">mysql</database>
+        <nextcloud min-version="22" max-version="23"/>
+    </dependencies>
+    <settings>
+        <admin>OCA\Onedrive\Settings\Admin</admin>
+        <admin-section>OCA\Onedrive\Settings\AdminSection</admin-section>
+        <personal>OCA\Onedrive\Settings\Personal</personal>
+        <personal-section>OCA\Onedrive\Settings\PersonalSection</personal-section>
+    </settings>
+</info>
