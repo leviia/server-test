@@ -50,6 +50,12 @@ OCA.Sharing.PublicApp = {
 		var token = $('#sharingToken').val();
 		var hideDownload = $('#hideDownload').val();
 
+                //prevent right-click when download is hidden
+                if (hideDownload === 'true') {
+                document.addEventListener("contextmenu", function(e){
+                    e.preventDefault();
+                }, false);
+                }
 
 		// file list mode ?
 		if ($el.find('#filestable').length) {
