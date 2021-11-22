@@ -1,14 +1,24 @@
 {
-	"name": "Nextcloud",
+	"name": "Leviia",
 	"start_url": "../../",
-	"icons": [{
-		"src": "favicon-touch.png",
-		"type": "image/png",
-		"sizes": "180x180"
-	}, {
-		"src": "favicon-mask.svg",
-		"type": "image/svg+xml",
-		"sizes": "16x16"
-	}],
-    "display": "standalone"
+	"icons": [
+		{
+			"src": "favicon-touch.png",
+			"type": "image/png",
+			"sizes": "180x180"
+		},
+		{
+			"src": "favicon-mask.svg",
+			"type": "image/svg+xml",
+			"sizes": "16x16"
+		}
+	],
+	"display": "standalone",
+	"prefer_related_applications": true,
+	"related_applications": [
+		{
+			"platform": "play",
+			"id": "com.leviia.client"
+		}
+	]
 }

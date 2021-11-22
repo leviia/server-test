@@ -390,7 +390,14 @@ class ThemingController extends Controller {
 						'sizes' => '16x16'
 					]
 				],
-			'display' => 'standalone'
+				'display' => 'standalone',
+				'prefer_related_applications' => true,
+				'related_applications' => [
+					[
+						'platform' => 'play',
+						'id' => 'com.leviia.client'
+					]
+				]
 		];
 		$response = new Http\JSONResponse($responseJS);
 		$response->cacheFor(3600);

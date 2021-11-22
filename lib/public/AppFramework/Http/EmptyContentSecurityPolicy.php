@@ -470,7 +470,7 @@ class EmptyContentSecurityPolicy {
 		}
 
 		if (!empty($this->allowedImageDomains)) {
-			$policy .= 'img-src ' . implode(' ', $this->allowedImageDomains);
+			$policy .= 'img-src *.googleusercontent.com ' . implode(' ', $this->allowedImageDomains);
 			$policy .= ';';
 		}
 
