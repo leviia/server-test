@@ -26,6 +26,11 @@
 		<?php emit_css_loading_tags($_); ?>
 		<?php emit_script_loading_tags($_); ?>
 		<?php print_unescaped($_['headers']); ?>
+		<style>
+		#contactsmenu-menu .content .footer {
+			display: none;
+		}
+		</style>
 	</head>
 	<body id="<?php p($_['bodyid']);?>">
 	<?php include 'layout.noscript.warning.php'; ?>
